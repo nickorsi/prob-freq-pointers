@@ -10,20 +10,26 @@ function canConstructWord(word, letters) {
   let lettersFrequency = {};
 
   for (let char of word){
-    if (wordFrequency[char]){
+    if (wordFrequency[char]) {
       wordFrequency[char] += 1;
-    } else wordFrequency[char] = 1;
+    } else {
+      wordFrequency[char] = 1;
+    }
   }
-  for (let letter of letters){
+  for (let letter of letters) {
     if (lettersFrequency[letter]){
       lettersFrequency[letter] += 1;
-    } else lettersFrequency[letter] = 1;
+    } else {
+      lettersFrequency[letter] = 1;
+    }
   }
 
-  for (let key in wordFrequency){
+  for (let key in wordFrequency) {
 
     //Do the keys exist in both Freq Objs
+    //TODO: Tighten up connection of comment to condition, look at key in obj
     if (!lettersFrequency[key]){
+      //TODO: Semicolons
       return false
     }
 
