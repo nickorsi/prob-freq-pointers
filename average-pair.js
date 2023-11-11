@@ -3,20 +3,20 @@
 /** averagePair takes in an arry and a target average, determines if
  * any pair of numbers in nums result in target average, returns boolean
  */
-//TODO: targetAvg vs ave
-function averagePair(nums, targetAve) {
+
+function averagePair(nums, targetAvg) {
   // Use multiple pointers to target multiple elements in a single loop
   // Declare startPointer and endPointer
   let startPointer = 0;
   let endPointer = nums.length-1;
   // Use while loop to iterate while startPointer<endPointer
-  while (startPointer < ndPointer) {
+  while (startPointer < endPointer) {
     // Declare avg = element[startPointer] + element[endpointer]/2
     const avg = (nums[startPointer] + nums[endPointer]) / 2;
-    // if avg === targetAve return true
-    if(avg === targetAve) return true;
-    // if avg > targetAve decrement endPointer
-    if(avg > targetAve) {
+    // if avg === targetAvg return true
+    if(avg === targetAvg) return true;
+    // if avg > targetAvg decrement endPointer
+    if(avg > targetAvg) {
       endPointer--;
     } else {
       // else increment startPointer

@@ -27,17 +27,15 @@ function canConstructWord(word, letters) {
   for (let key in wordFrequency) {
 
     //Do the keys exist in both Freq Objs
-    //TODO: Tighten up connection of comment to condition, look at key in obj
-    if (!lettersFrequency[key]){
-      //TODO: Semicolons
-      return false
+    if (!(key in lettersFrequency)){
+      return false;
     }
 
     //Do the values of word FC keys at least match values of letter FC
     if (!(wordFrequency[key] <= lettersFrequency[key])){
-      return false
+      return false;
     }
   }
 
-  return true
+  return true;
 }
